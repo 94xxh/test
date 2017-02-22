@@ -1,0 +1,122 @@
+            <aside class="sidebar-menu fixed">
+                <div class="sidebar-inner scrollable-sidebar">
+                    <div class="main-menu">
+                        <ul class="accordion">
+                            <li class="menu-header">
+                                Main Menu
+                            </li>
+                            <!-- active open 两属性为 当前选中菜单及菜单展开状态 -->
+                            <li class="bg-palette1 active ">
+                                <a href="{:U('Index/index')}">
+                                    <span class="menu-content block">
+                                        <span class="menu-icon"><i class="block fa fa-home fa-lg"></i></span>
+                                        <span class="text m-left-sm">首页</span>
+                                    </span>
+                                    <span class="menu-content-hover block">
+                                        Home
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="openable bg-palette4">
+                                <a href="#">
+                                    <span class="menu-content block">
+                                        <span class="menu-icon"><i class="block fa fa-user fa-lg"></i></span>
+                                        <span class="text m-left-sm">会员中心</span>
+                                        <span class="submenu-icon"></span>
+                                    </span>
+                                    <span class="menu-content-hover block">
+                                        会员中心
+                                    </span>
+                                </a>
+                                <ul class="submenu bg-palette4 ">
+                                    <li><a href="{:U('User/index')}"><span class="submenu-label">会员管理</span></a></li>
+                                    <li><a href="{:U('User/comment')}"><span class="submenu-label">评论列表</span></a></li>
+                                    <li><a href=""><span class="submenu-label">备用</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="openable bg-palette3">
+                                <a href="#">
+                                    <span class="menu-content block">
+                                        <span class="menu-icon"><i class="block fa fa-bar-chart-o fa-lg"></i></span>
+                                        <span class="text m-left-sm">统计管理</span>
+                                        <span class="submenu-icon"></span>
+                                    </span>
+                                    <span class="menu-content-hover block">
+                                        统计管理
+                                    </span>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href=""><span class="submenu-label">示例</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="openable bg-palette4">
+                                <a href="#">
+                                    <span class="menu-content block">
+                                        <span class="menu-icon"><i class="block fa fa-bullhorn fa-lg"></i></span>
+                                        <span class="text m-left-sm">新闻发布中心</span>
+                                        <span class="submenu-icon"></span>
+                                    </span>
+                                    <span class="menu-content-hover block">
+                                        News
+                                    </span>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href=""><span class="submenu-label">新闻列表</span></a></li>
+                                    <li><a href=""><span class="submenu-label">发布新闻通知</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="openable bg-palette3">
+                                <a href="#">
+                                    <span class="menu-content block">
+                                        <span class="menu-icon"><i class="block fa fa-bar-chart-o fa-lg"></i></span>
+                                        <span class="text m-left-sm">管理员管理</span>
+                                        <span class="submenu-icon"></span>
+                                    </span>
+                                    <span class="menu-content-hover block">
+                                        管理员管理
+                                    </span>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href=""><span class="submenu-label">管理员列表</span></a></li>
+                                    <li><a href=""><span class="submenu-label">权限管理</span></a></li>
+                                    <li><a href=""><span class="submenu-label">角色管理</span></a></li> 
+                                </ul>
+                            </li>
+                            <li class="openable bg-palette4">
+                                <a href="#">
+                                    <span class="menu-content block">
+                                        <span class="menu-icon"><i class="block fa fa-book fa-lg"></i></span>
+                                        <span class="text m-left-sm">帮助中心</span>
+                                        <span class="submenu-icon"></span>
+                                    </span>
+                                    <span class="menu-content-hover block">
+                                        帮助中心
+                                    </span>
+                                </a>
+                                <ul class="submenu">
+                                    <li class="openable">
+                                        <a href="signin.html">
+                                            <span class="submenu-label">menu 2.1</span>
+                                        </a>
+                                        <ul class="submenu third-level">
+                                            <li><a href="#"><span class="submenu-label">menu 3.1</span></a></li>
+                                            <li><a href="#"><span class="submenu-label">menu 3.2</span></a></li>
+                                            <li class="openable">
+                                                <a href="#">
+                                                    <span class="submenu-label">menu 3.3</span>
+                                                    <small class="badge badge-danger badge-square bounceIn animation-delay2 m-left-xs pull-right">2</small>
+                                                </a>
+                                                <ul class="submenu fourth-level">
+                                                    <li><a href="#"><span class="submenu-label">menu 4.1</span></a></li>
+                                                    <li><a href="#"><span class="submenu-label">menu 4.2</span></a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#"><span class="submenu-label">menu 2.2</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>  
+                </div><!-- sidebar-inner -->
+            </aside>

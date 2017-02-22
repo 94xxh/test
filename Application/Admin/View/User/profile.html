@@ -1,0 +1,405 @@
+<!--头部HTML模板-->
+<include file="public/head" /> 
+<!--end-->
+  
+<!--头部菜单-->
+<include file="public/top-nav" /> 
+<!--end--> 
+
+<!--左边菜单栏-->
+<include file="public/sidebar-menu" /> 
+<!--end--> 
+			
+<div class="main-container">
+				<div class="padding-md">
+				<ul class="breadcrumb">
+					<li><span class="primary-font"><i class="icon-home"></i></span><a href="{:U('Index/index')}"> 首页</a></li>
+				</ul>
+
+					<h3 class="header-text m-bottom-md">
+						个人资料
+					</h3>
+
+					<div class="row user-profile-wrapper">
+						<div class="col-md-3 user-profile-sidebar m-bottom-md">
+							<div class="row">
+								<div class="col-sm-4 col-md-12">
+									<div class="user-profile-pic">
+										<img src="__ROOT__/Uploads/test/1.jpg" alt="">
+										<div class="ribbon-wrapper">
+											<div class="ribbon-inner shadow-pulse bg-success">
+												It's Me
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-12">
+									<div class="user-name m-top-sm">Jane Doe<i class="fa fa-circle text-success m-left-xs font-14"></i></div>
+
+									<div class="m-top-sm">
+										<div>
+											<i class="fa fa-map-marker user-profile-icon"></i>
+											广东广州
+										</div>
+
+										<div class="m-top-xs">
+											<i class="fa fa-anchor user-profile-icon"></i>
+											某某部门经理
+										</div>
+									</div>
+
+									<h4 class="m-top-md m-bottom-sm">简介</h4>
+									<p class="m-top-sm">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at.
+									<p>
+
+									<h4 class="m-top-md m-bottom-sm">联系方式</h4>	
+
+									<a class="social-link facebook-hover"><i class="fa fa-phone"></i></a>
+									<a class="social-link facebook-hover"><i class="fa fa-facebook"></i></a>
+									<a class="social-link twitter-hover"><i class="fa fa-twitter"></i></a>
+									<a class="social-link pinterest-hover"><i class="fa fa-pinterest"></i></a>
+
+								</div>
+							</div><!-- ./row -->
+						</div><!-- ./col -->
+						<div class="col-md-9">
+							<div class="smart-widget">
+								<div class="smart-widget-inner">
+									<ul class="nav nav-tabs tab-style2 tab-right bg-grey">		
+								  		<li>
+								  			<a href="#profileTab1" data-toggle="tab">
+								  				<span class="icon-wrapper"><i class="fa fa-bars"></i></span>
+								  				<span class="text-wrapper">操作预览</span>
+								  			</a>
+								  		</li>								  		
+								  		<li class="active">
+								  			<a href="#profileTab2" data-toggle="tab">
+								  				<span class="icon-wrapper"><i class="fa fa-book"></i></span>
+								  				<span class="text-wrapper">账户信息</span>
+								  			</a>
+								  		</li>
+									</ul>
+									<div class="smart-widget-body">
+										<div class="tab-content">
+											<div class="tab-pane fade" id="profileTab1">
+												<h4 class="header-text m-bottom-md">
+													操作记录
+													<span class="sub-header">
+														该账号近期进行的操作
+													</span>
+												</h4>
+												<div class="row">
+													<div class="col-lg-8">
+														<h4 class="m-top-md">最新记录</h4>
+
+														<div class="recent-activity-list">
+															<ul>
+																<li>
+																	<div class="activity-user-profile">
+																		<img src="__ROOT__/Uploads/test/1.jpg" alt="">
+																	</div>
+																	<div class="activity-detail">
+																		<span class="font-semi-bold">Karen Martin</span> started following <span class="font-semi-bold">Jame Smith</span>.
+																		<small class="text-muted block">36 mins ago</small> 
+																	</div>
+																</li>
+																<li>
+																	<div class="activity-user-profile">
+																		<img src="__ROOT__/Uploads/test/1.jpg" alt="">
+																	</div>
+																	<div class="activity-detail">
+																		<span class="font-semi-bold">Karen Martin</span> just added <span class="font-semi-bold">Simplify Admin</span> to dashboard.
+																		<small class="text-muted block">3 hrs ago </small> 
+																	</div>
+																</li>
+																<li>
+																	<div class="activity-user-profile">
+																		<img src="__ROOT__/Uploads/test/1.jpg" alt="">
+																	</div>
+																	<div class="activity-detail">
+																		<span class="font-semi-bold">Elizabeth Carter</span> uploaded <a class="font-semi-bold">3 photos</a>.
+																		<small class="text-muted block">36 mins ago</small> 
+
+																		<ul class="uploaded-photo-list m-top-sm clearfix">
+																			<li><a href="#"><img src="__ROOT__/Uploads/test/1.jpg" alt=""></a></li>
+																			<li><a href="#"><img src="__ROOT__/Uploads/test/1.jpg" alt=""></a></li>
+																			<li><a href="#"><img src="__ROOT__/Uploads/test/1.jpg" alt=""></a></li>
+																		</ul><!-- ./upload-photo-list -->
+																	</div>
+																</li>
+															</ul>
+														</div><!-- ./.recent-activity-list -->
+													</div><!-- ./col -->
+												</div><!-- ./row -->
+											</div><!-- ./tab-pane -->
+											<div class="tab-pane fade in active" id="profileTab2">
+												<h4 class="header-text m-top-md">个人信息</h4>
+												<form class="form-horizontal m-top-md">
+													<div class="form-group">
+													    <label class="col-sm-3 control-label">Name</label>
+													    <div class="col-sm-9">
+													      	<input type="text" class="form-control" value="Jane Doe">
+													    </div>
+													</div>
+													<div class="form-group">
+													    <label class="col-sm-3 control-label">Surname</label>
+													    <div class="col-sm-9">
+													      	<input type="text" class="form-control">
+													    </div>
+													</div>
+													<div class="form-group">
+													    <label class="col-sm-3 control-label">Gender</label>
+													    <div class="col-sm-9">
+													      	<div class="radio inline-block">
+																<div class="custom-radio m-right-xs">
+																	<input type="radio" id="inlineRadio1" name="profileGender">
+																	<label for="inlineRadio1"></label>
+																</div>
+																<div class="inline-block vertical-top">Male</div>
+															</div>
+															<div class="radio inline-block m-left-sm">
+																<div class="custom-radio m-right-xs">
+																	<input type="radio" id="inlineRadio2" name="profileGender">
+																	<label for="inlineRadio2"></label>
+																</div>
+																<div class="inline-block vertical-top">Female</div>
+															</div>
+													    </div>
+													</div>
+
+													<div class="form-group">
+													    <label class="col-sm-3 control-label">Address</label>
+													    <div class="col-sm-9">
+													      	<textarea rows="4" class="form-control"></textarea>
+													    </div>
+													</div>
+
+													<div class="form-group">
+													    <label class="col-sm-3 control-label">Phone</label>
+													    <div class="col-sm-9">
+													      	<input type="text" class="form-control" value="">
+													    </div>
+													</div>
+
+													<div class="form-group">
+													    <label class="col-sm-3 control-label">Website</label>
+													    <div class="col-sm-9">
+													      	<input type="text" class="form-control" value="">
+													    </div>
+													</div>
+													<div class="form-group m-top-lg">
+													    <label class="col-sm-3 control-label"></label>
+													    <div class="col-sm-9">
+													      	<a class="btn btn-default">Submit</a>
+													      	<a class="btn btn-info m-left-xs">Cancel</a>
+													    </div>
+													</div>								
+												</form>
+											</div><!-- ./tab-pane -->
+											<div class="tab-pane fade" id="profileTab3">
+												<div class="profile-follower-list clearfix">
+													<ul>
+														<li>
+															<div class="panel panel-default clearfix">
+																<div class="panel-body">
+																	<div class="user-wrapper">
+																		<div class="user-avatar">
+																			<img class="small-img img-circle img-thumbnail" src="images/profile/profile2.jpg" alt="">
+																		</div>
+																		<div class="user-detail small-img">
+																			<div class="font-16">Karen Martin</div>
+																			<small class="block text-muted font-12">Web Designer</small>
+																			<small>
+																				<small class="freelancer-rating">
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																				</small>
+																			</small>
+
+																			<div class="m-top-sm">
+																				<button type="button" class="btn btn-default btn-sm marginTB-xs" disabled="" data-toggle="modal">following</button>
+																				<button type="button" class="btn btn-success btn-sm marginTB-xs" data-toggle="modal">View Profile</button>
+																			</div>
+																		</div>
+																	</div><!-- ./user-wrapper -->
+																</div>
+															</div>
+														</li>
+
+														<li>
+															<div class="panel panel-default clearfix">
+																<div class="panel-body">
+																	<div class="user-wrapper">
+																		<div class="user-avatar">
+																			<img class="small-img img-circle img-thumbnail" src="images/profile/profile3.jpg" alt="">
+																		</div>
+																		<div class="user-detail small-img">
+																			<div class="font-16">Sarah Garcia</div>
+																			<small class="block text-muted font-12">Content Writing</small>
+																			<small>
+																				<small class="freelancer-rating">
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																				</small>
+																			</small>
+
+																			<div class="m-top-sm">
+																				<button type="button" class="btn btn-default btn-sm marginTB-xs" disabled="" data-toggle="modal">following</button>
+																				<button type="button" class="btn btn-success btn-sm marginTB-xs" data-toggle="modal">View Profile</button>
+																			</div>
+																		</div>
+																	</div><!-- ./user-wrapper -->
+																</div>
+															</div>
+														</li>
+
+														<li>
+															<div class="panel panel-default clearfix">
+																<div class="panel-body">
+																	<div class="user-wrapper">
+																		<div class="user-avatar">
+																			<img class="small-img img-circle img-thumbnail" src="images/profile/profile4.jpg" alt="">
+																		</div>
+																		<div class="user-detail small-img">
+																			<div class="font-16">Jame Smith</div>
+																			<small class="block text-muted font-12">Programmer</small>
+																			<small>
+																				<small class="freelancer-rating">
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																				</small>
+																			</small>
+
+																			<div class="m-top-sm">
+																				<button type="button" class="btn btn-primary btn-sm marginTB-xs" data-toggle="modal">follow</button>
+																				<button type="button" class="btn btn-success btn-sm marginTB-xs" data-toggle="modal">View Profile</button>
+																			</div>
+																		</div>
+																	</div><!-- ./user-wrapper -->
+																</div>
+															</div>
+														</li>
+
+														<li>
+															<div class="panel panel-default clearfix">
+																<div class="panel-body">
+																	<div class="user-wrapper">
+																		<div class="user-avatar">
+																			<img class="small-img img-circle img-thumbnail" src="images/profile/profile5.jpg" alt="">
+																		</div>
+																		<div class="user-detail small-img">
+																			<div class="font-16">Elizabeth Carter</div>
+																			<small class="block text-muted font-12">@Elizabeth</small>
+																			<small>
+																				<small class="freelancer-rating">
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																				</small>
+																			</small>
+
+																			<div class="m-top-sm">
+																				<button type="button" class="btn btn-primary btn-sm marginTB-xs" data-toggle="modal">follow</button>
+																				<button type="button" class="btn btn-success btn-sm marginTB-xs" data-toggle="modal">View Profile</button>
+																			</div>
+																		</div>
+																	</div><!-- ./user-wrapper -->
+																</div>
+															</div>
+														</li>
+
+														<li>
+															<div class="panel panel-default clearfix">
+																<div class="panel-body">
+																	<div class="user-wrapper">
+																		<div class="user-avatar">
+																			<img class="small-img img-circle img-thumbnail" src="images/profile/profile6.jpg" alt="">
+																		</div>
+																		<div class="user-detail small-img">
+																			<div class="font-16">Christopher Brown</div>
+																			<small class="block text-muted font-12">@Christopher</small>
+																			<small>
+																				<small class="freelancer-rating">
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																				</small>
+																			</small>
+
+																			<div class="m-top-sm">
+																				<button type="button" class="btn btn-primary btn-sm marginTB-xs" data-toggle="modal">follow</button>
+																				<button type="button" class="btn btn-success btn-sm marginTB-xs" data-toggle="modal">View Profile</button>
+																			</div>
+																		</div>
+																	</div><!-- ./user-wrapper -->
+																</div>
+															</div>
+														</li>
+
+														<li>
+															<div class="panel panel-default clearfix">
+																<div class="panel-body">
+																	<div class="user-wrapper">
+																		<div class="user-avatar">
+																			<img class="small-img img-circle img-thumbnail" src="images/profile/profile7.jpg" alt="">
+																		</div>
+																		<div class="user-detail small-img">
+																			<div class="font-16">Jane Doe</div>
+																			<small class="block text-muted font-12">janeDoe@company.com</small>
+																			<small>
+																				<small class="freelancer-rating">
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																					<i class="fa fa-star text-warning"></i>
+																				</small>
+																			</small>
+
+																			<div class="m-top-sm">
+																				<button type="button" class="btn btn-primary btn-sm marginTB-xs" data-toggle="modal">follow</button>
+																				<button type="button" class="btn btn-success btn-sm marginTB-xs" data-toggle="modal">View Profile</button>
+																			</div>
+																		</div>
+																	</div><!-- ./user-wrapper -->
+																</div>
+															</div>
+														</li>
+													</ul>
+												</div><!-- ./profile-follower-list -->
+											</div><!-- ./tab-pane -->
+										</div><!-- ./tab-content -->
+									</div><!-- ./smart-widget-body -->
+								</div><!-- ./smart-widget-inner -->
+							</div><!-- ./smart-widget -->
+						</div>
+					</div>
+				</div><!-- ./padding-md -->
+			</div><!-- /main-container -->
+		</div><!-- /wrapper -->
+
+		<a href="#" class="scroll-to-top hidden-print"><i class="fa fa-chevron-up fa-lg"></i></a>
+
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+
+		<!-- Jquery -->
+
+
+  	</body>
+</html>

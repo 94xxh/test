@@ -1,0 +1,14 @@
+/*add by somnus
+ *Q:663076
+ */
+#edialog_mobile,body{font-family:'微软雅黑';}  
+#edialog_mobile .edialog_mobile_box{ width:260px; _height:300px; position:fixed; left:50%; margin-left:-130px; top:50%; margin-top:-100px; background:#fff; _border-top:3px solid #4abdcc; z-index:99999; display:none;-moz-border-radius: 5px; border-radius: 5px;}
+#edialog_mobile .edialog_mask{ width:100%; height:100%; position:fixed; left:0; top:0; z-index:99998; background:rgba(0,0,0,0.3); background:#000; filter:Alpha(opacity=30);-moz-opacity:0.3;opacity:0.3;display:none;}
+#edialog_mobile .edialog_mobile_box_h{ _height:42px;  padding:21px 12px 18px 12px; color:#000; font-size:15px; text-align:center; _word-break:break-all; word-wrap:break-word; white-space:normal; }
+#edialog_mobile .edialog_mobile_box_msg{line-height:20px;max-height:160px; overflow-x:hidden} 
+#edialog_mobile .edialog_mobile_box_t{ font-weight:bold; font-size:19px; margin-bottom:5px}
+#edialog_mobile .edialog_mobile_box_con{ _padding:10px 15px; _height:185px; border-bottom:solid 1px #e9e9e9; border-top:solid 1px #e9e9e9; -webkit-box-sizing:border-box; overflow:hidden; _padding:5px;  }
+#edialog_mobile .edialog_btn_wrap{ _display:-webkit-box;} 
+#edialog_mobile .edialog_btn_wrap a{ height:50px; display:block; text-align:center; line-height:50px; color:#4abdcc; font-size:17px; -webkit-box-flex:1; text-decoration:none; cursor:pointer; float:left}
+#edialog_mobile .community_txta{ display:block; width:100%; border:none; resize:none; color:#787878; _font-size:1em; font-family:'微软雅黑'; -webkit-box-sizing:border-box; height:4em;}
+#edialog_mobile .loading-btn{background:url("wait.gif") 12px no-repeat; color:#999; padding-left:35px}   

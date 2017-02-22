@@ -1,0 +1,115 @@
+<!--头部HTML模板-->
+<include file="public/head" /> 
+<!--end-->
+  
+<!--头部菜单-->
+<include file="public/top-nav" /> 
+<!--end--> 
+
+<!--左边菜单栏-->
+<include file="public/sidebar-menu" /> 
+<!--end--> 
+			
+<!--内容体-->
+            <div class="main-container">
+                <div class="padding-md">
+                    <ul class="breadcrumb">
+                        <li><span class="primary-font"><i class="icon-home"></i></span><a href="{:U('Index/index')}"> 首页</a></li>
+  <!--               面包屑导航栏        
+                        <li>二级</li>    
+                        <li>三级</li>       -->
+                    </ul>
+        <div class="row" id="weather">
+            <div class="col-lg-12 padding-md"> 
+                <button type="button" class="btn btn-default marginTB-xs"><i class="fa fa-spinner fa-spin m-right-xs"></i> 天气预报 Loading</button> 
+            </div> 
+        </div>                    
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="user-widget user-widget2">
+                    <div class="user-widget-body bg-success">
+                        <img src="__ROOT__/Uploads/test/1.jpg" >
+                        <div class="user-detail">
+                            <div class="m-top-sm ">账号</div>
+                            <div class="small-text text-white">用户真实姓名</div>
+                        </div>
+                    </div>
+                    <div class="list-group">
+                        <a class="list-group-item">
+                            <i class="fa fa-phone fa-lt grey"></i>
+                            <span class="m-left-xs">18888888888</span> 
+                            <span class="badge badge-warning"></span>
+                        </a>
+                        <a class="list-group-item">
+                            <i class="fa fa-envelope fa-lg grey"></i>
+                            <span class="m-left-xs">18888888888@zkungfu.com</span>
+                            <span class="badge badge-warning"></span> 
+                        </a>
+                        <a class="list-group-item">
+                            <i class="fa fa-clock-o fa-lg grey"></i>
+                            <span class="m-left-xs">最近登陆时间</span> 
+                            <span class="badge badge-warning"></span>
+                        </a>
+                        <a class="list-group-item">
+                            <i class="fa fa-lg grey">IP</i>
+                            <span class="m-left-xs">172.16.171.140</span> 
+                            <span class="badge badge-warning"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="panel panel-default calendar-widget">
+                    <div class="padding-md bg-info clearfix">
+                        <div class="date-big">{:date("d")}</div>
+                        <div class="current-date">
+                            {~$weekarray=array("星期日","星期一","星期二","星期三","星期四","星期五","星期六"); }
+                            <div class="text-upper">{$weekarray[date("w")]}</div>
+                            <small class="text-muted block">{:date("m")}/{:date("Y")}</small>
+                        </div>
+                    </div>
+                    <div class="panel-body no-padding bg-white">
+                        <p id="calendar" class="custom-calendar" style="width:100%"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+                </div><!-- /.padding-md -->
+            </div><!-- /main-container -->
+             
+<!-- Datepicker -->
+<script src='__PUBLIC__/Admin/js/uncompressed/datepicker.js'></script>
+<script>
+
+$(function(){
+    var url = "{:U('index/index',array('method'=>'ajax_weather'))}";
+    //$('#weather').load(url,{},function(data){ });
+    $.ajax({
+        type:'get',
+        url:url,
+        dataType:'html',
+        timeout:5000,   //超过5秒 作为超时加载处理，避免长时间等待
+        success:function(data){
+            $('#weather').html(data);
+        },
+        error:function(){
+            dg_alert("天气加载超时", "确定");
+        }
+    })
+    //$.get(url,null,function(data){$('#weather').html(data)})
+})
+
+//Datepicker
+$('#calendar').DatePicker({
+    flat: true,
+    date: '{:date("Y-m-d H:i:s")}',
+    current: '{:date("Y-m-d H:i:s")}',
+    calendars: 1,
+    starts: 2
+});
+</script>            
+<!--底部-->
+<include file="public/footer" />
+<!--end--> 
+		 

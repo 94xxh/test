@@ -1,0 +1,69 @@
+{~$weather_daily =json_decode($weather_daily)}
+{~$location=$weather_daily->results[0]->location}
+{~$daily=$weather_daily->results[0]->daily} 
+<!--{~$weather_now =json_decode($weather_now)} -->
+<div class="col-md-4">
+    <div class="panel panel-default weather-widget">
+        <div class="panel-body bg-success text-white">
+            <div class="h4 text-white text-center">今天</div>
+
+            <div class="m-top-md m-bottom-md text-center">
+                <!--< if condition="$weather_now->results[0]->now->code eq true">
+                <img src="__ROOT__/Uploads/3d_180/{$weather_now->results[0]->now->code}.png" />
+                < else/>
+                <img src="__ROOT__/Uploads/3d_180/{$daily[0]->code_day}.png" />
+                < /if>-->
+                <img src="__ROOT__/Uploads/3d_180/{$daily[0]->code_day}.png" />
+            </div>
+
+            <div class="degree-text text-center">{$daily[0]->low}° ~ {$daily[0]->high}°</div>
+        </div> 
+        <div class="panel-footer bg-white text-center padding-md">
+            <div class="h4 text-upper"><!--当前温度：<font color="red">{$weather_now->results[0]->now->temperature}°　{$weather_now->results[0]->now->text}</font>-->　　{$location->name} <i class="fa fa-map-marker"></i></div>
+            <div class="text-muted font-12 m-top-xs">白天：{$daily[0]->text_day}　晚间：{$daily[0]->text_night}</div>
+            <div class="text-muted font-12 m-top-xs">降水概率（0~100）：{$daily[0]->precip}</div>
+            <div class="text-muted font-12 m-top-xs">风速（km/h）：{$daily[0]->wind_speed}　风力等级：{$daily[0]->wind_scale}</div>
+        </div>
+    </div><!-- ./panel -->
+</div>
+
+<div class="col-md-4">
+    <div class="panel panel-default weather-widget">
+        <div class="panel-body bg-success text-white">
+            <div class="h4 text-white text-center">明天</div>
+
+            <div class="m-top-md m-bottom-md text-center">
+                <img src="__ROOT__/Uploads/3d_180/{$daily[1]->code_day}.png" />
+            </div>
+
+            <div class="degree-text text-center">{$daily[1]->low}° ~ {$daily[1]->high}°</div>
+        </div>
+        <div class="panel-footer bg-white text-center padding-md">
+            <div class="h4 text-upper">{$location->name} <i class="fa fa-map-marker"></i></div>
+            <div class="text-muted font-12 m-top-xs">白天：{$daily[1]->text_day}　晚间：{$daily[1]->text_night}</div>
+            <div class="text-muted font-12 m-top-xs">降水概率（0~100）：{$daily[1]->precip}</div>
+            <div class="text-muted font-12 m-top-xs">风速（km/h）：{$daily[1]->wind_speed}　风力等级：{$daily[1]->wind_scale}</div>
+        </div>
+    </div><!-- ./panel -->
+</div>
+ 
+
+<div class="col-md-4">
+    <div class="panel panel-default weather-widget">
+        <div class="panel-body bg-success text-white">
+            <div class="h4 text-white text-center">后天</div>
+
+            <div class="m-top-md m-bottom-md text-center">
+                <img src="__ROOT__/Uploads/3d_180/{$daily[2]->code_day}.png" />
+            </div>
+
+            <div class="degree-text text-center">{$daily[2]->low}° ~ {$daily[2]->high}°</div>
+        </div>
+        <div class="panel-footer bg-white text-center padding-md">
+            <div class="h4 text-upper">{$location->name} <i class="fa fa-map-marker"></i></div>
+            <div class="text-muted font-12 m-top-xs">白天：{$daily[2]->text_day}　晚间：{$daily[2]->text_night}</div>
+            <div class="text-muted font-12 m-top-xs">降水概率（0~100）：{$daily[2]->precip}</div>
+            <div class="text-muted font-12 m-top-xs">风速（km/h）：{$daily[2]->wind_speed}　风力等级：{$daily[2]->wind_scale}</div>
+        </div>
+    </div><!-- ./panel -->
+</div>

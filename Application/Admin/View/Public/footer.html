@@ -1,0 +1,119 @@
+<footer class="footer" style="text-align:center">
+    <span class="footer-brand">
+        <!--<strong class="text-danger">kungfudingcan</strong> Admin-->
+    </span>
+    <p class="no-margin">
+        &copy; 2016 <strong>zkungfu</strong>. ALL Rights Reserved. 
+    </p>	
+</footer>
+
+
+
+<!-- Delete Widget Confirmation -->
+<div class="custom-popup delete-widget-popup delete-confirmation-popup" id="deleteWidgetConfirm" style="display:none">
+    <div class="popup-header text-center">
+        <!--<span class="fa-stack fa-4x">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+        </span>-->
+        温馨提示
+    </div>
+    <div class="popup-body text-center">
+        <h5>您确定要这样做吗?</h5>
+        <strong class="block m-top-xs"><i class="fa fa-exclamation-circle m-right-xs text-danger"></i>这个动作将无法恢复</strong> 
+        <div class="text-center m-top-lg">
+            <a class="btn btn-success m-right-sm remove-alert-btn"> 确　定 </a>
+            <a class="btn btn-default deleteWidgetConfirm_close"> 取　消 </a>
+        </div>
+    </div>
+</div>
+
+{$error_alert}
+
+<script>
+	$(function()	{
+		//Delete Widget Confirmation
+		$('#deleteWidgetConfirm').popup({
+			vertical: 'top',
+			pagecontainer: '.container',
+			transition: 'all 0.3s'
+		});
+		
+		$('.remove-alert, .show-alert').click(function()	{  
+			$activeRemove = $(this); 
+			if($activeRemove.attr('data-type')=='1'){
+				$('.m-top-xs').hide();
+			}else{
+				$('.m-top-xs').show();
+			}
+			$('#deleteWidgetConfirm').popup('show'); 
+			return false;
+	
+		});
+		
+		$('.remove-alert-btn').unbind().click(function(){ 
+			$alert_href = $activeRemove.attr('data-href'); 
+			$('#deleteWidgetConfirm').popup('hide'); 
+			//location.href=$alert_href;
+			LoadJS('ajax_fun', '__PUBLIC__/Admin/edialog/ajax_fun.js', function(){  
+				var url = $alert_href;   
+				var datas = {'f':'json','ftype':'1'};  
+				ajax_fun(url,'get',datas,function(obj,data){ window.top.__dg.cancel(); location.href=obj.url; },true,true); 
+			});
+			return false;
+		});
+		
+		$('.ajax_sort_num').blur(function(){
+			LoadJS('ajax_fun', '__PUBLIC__/Admin/edialog/ajax_fun.js', function(th){  
+				var url = $(th).attr('data-url');  
+				var id = $(th).attr('data-id'); 
+				var old_sort_num = $(th).attr('data-sort-num');
+				var sort_num = $(th).val(); 
+				if(old_sort_num == sort_num) return ;
+				var datas = {sort_num:sort_num, id:id, 'f':'json','ftype':'1'};   
+				ajax_fun(url,'get',datas,function(obj,data){
+					window.top.__dg.cancel();
+					$(th).val(sort_num);
+					var lhref = location.href;
+					var href = lhref.replace(/&id=[\w]*/g, "")+'&id='+id; 
+					location.replace(href);
+				},true,true);  
+			}, $(this)); 
+		})
+		
+	}); 
+	
+	function return_sort_num_back(obj, data){ 
+		location.href=obj.url;
+	}
+	
+	
+	function LoadJS( id, fileUrl ,fn , th) 
+
+	{  
+		var scriptTag = document.getElementById( id );  
+		var oHead = document.getElementsByTagName('HEAD').item(0);  
+		var oScript= document.createElement("script");   
+		if ( scriptTag  ) {
+			//oHead.removeChild( scriptTag  ); 
+			if(typeof fn =="function"){  
+				fn(th);
+			}
+			return;
+		}
+		oScript.id = id;  
+		oScript.type = "text/javascript";  
+		oScript.src=fileUrl ;  
+		oHead.appendChild( oScript); 
+		oScript.onload = function(){ 
+			if(typeof fn =="function"){  
+				fn(th);
+			}
+		} 
+	} 
+	 
+</script>
+
+</div><!-- /wrapper -->   
+</body>
+</html>
